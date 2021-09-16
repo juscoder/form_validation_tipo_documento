@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">		
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	
+	<title> tarea-bootstrap-justino </title>
+</head>
+<body>
+	<div class="container">
+        <div class="row mt-3 justify-content-center">
+            <div class="col-10">
+                <div class="card border-danger mb-3">
+                    <form action="" class="needs-validation"  novalidate>
+                        <div class="card-header bg-warning text-white text-center">
+                            <h3>FORMULARIO</h3>
+                        </div>
+                        <div class="card-body bg-info">											
+							<div class=" border rounded-lg">
+								<div class="alert alert-dark text-center">
+									<strong>Formulario de registro de Usuario</strong>
+								</div>								
+								
+								<div class="panel">			
+												
+									<div class="row justify-content-center">	
+                                        <div class="form-group col-md-6 position-relative">
+                                            <label for="">Nombres:</label>
+                                            <input type="text" class="form-control" placeholder="Ingresa su nombre" required>
+                                            <div class="invalid-tooltip">Falta Ingresar Nombre</div>
+                                            <div class="valid-tooltip">Dato válido</div>
+                                        </div>
+                                        <div class="form-group col-md-6 position-relative">
+                                            <label for="">Apellidos:</label>
+                                            <input type="text" class="form-control" placeholder="Ingrese sus apellidos" required>
+                                            <div class="invalid-tooltip">Falta Ingresar Apellidos</div>
+                                            <div class="valid-tooltip">Dato válido</div>
+                                        </div>		
+                                        <div class="form-group col-md-6 position-relative">
+											<label>Tipo de Documento:</label>
+											<select name="" id="sel_tdocumento" class="form-control" required>
+												<option value="" disabled selected>- Seleccione -</option>
+												<option value="DNI">-DNI</option>
+												<option value="PASAPORTE">-Pasaporte</option>
+												<option value="RUC">-RUC</option>
+												<option value="CARNET">-Carnet de Extranjeria</option>
+                                            </select>
+                                            <div class="invalid-tooltip">
+												Falta Ingresar Tipo de Documento
+											</div>
+											
+										</div>							
+										<div class="form-group col-md-6 position-relative">
+											<label>Nº de Documento</label>
+											<input type="text" class="form-control" id="txtnro" placeholder="Nº de Documento" required>
+											<div class="invalid-tooltip">
+												Falta Ingresar Nº de Documento
+											</div>
+										</div>							
+									</div>								
+								</div>	
+						<!-- bontones  -->    
+						<div class="card-footer">
+							<div class="row justify-content-center ">
+								<div class="row col-sm-12 col-md-3 mt-5">     
+									<!-- <button onclick="validarDocumento()" class="btn btn-success btn-block mb-2">hola</button -->>                              
+									<input onclick="validarDocumento()" value="Enviar Formulario" class="btn btn-success btn-block mb-2">
+									<input class="btn btn-danger" type="reset" value="Limpiar campos">
+								</div>
+								
+							</div>
+							
+                        </div>          
+					</form>					
+                </div>
+			</div>
+			
+		</div>
+		<table class="table table-striped">
+			<thead>
+			  <tr>
+				<th scope="col">#</th>
+				<th scope="col">Tipo Documento</th>
+				<th scope="col">N° Dígitos</th>
+				<th scope="col">Ejemplos</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<th scope="row">1</th>
+				<td>DNI</td>
+				<td>8 dígitos</td>
+				<td>77128842</td>
+			  </tr>
+			  <tr>
+				<th scope="row">2</th>
+				<td>Pasaporte</td>
+				<td>12 dígitos</td>
+				<td>995846554802</td>
+			  </tr>
+			  <tr>
+				<th scope="row">3</th>
+				<td>RUC</td>
+				<td>11 dígitos</td>
+				<td>20532658986</td>
+			  </tr>
+			  <tr>
+				<th scope="row">4</th>
+				<td>Carnet de extranjeria</td>
+				<td>12 dígitos</td>
+				<td>562489977544</td>
+			  </tr>
+			</tbody>
+		  </table>
+		  <div class="footer text-center">
+			  <hr>
+			  <h5><em>| Ramos Aduviri Justino |</em></h5>
+			  
+		  </div>
+	</div>  
+	<script>
+		// Disable form submissions if there are invalid fields
+		(function() {
+		  'use strict';
+		  window.addEventListener('load', function() {
+			// Get the forms we want to add validation styles to
+			var forms = document.getElementsByClassName('needs-validation');
+			// Loop over them and prevent submission
+			var validation = Array.prototype.filter.call(forms, function(form) {
+			  form.addEventListener('submit', function(event) {
+				if (form.checkValidity() === false) {
+				  event.preventDefault();
+				  event.stopPropagation();
+				}
+				form.classList.add('was-validated');
+			  }, false);
+			});
+		  }, false);
+		})();
+		</script> 
+		
+		
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="js/validardatos.js"></script>
+</html>
+
+
+
